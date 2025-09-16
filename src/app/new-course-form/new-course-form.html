@@ -1,7 +1,8 @@
-<form>
+<form [formGroup]="signUpForm">
   <div class="form-group">
     <label for="username">Username</label>
     <input
+      formControlName="username"
       type="text"
       class="form-control"
       id="username"
@@ -12,6 +13,7 @@
   <div class="form-group">
     <label for="password">Password</label>
     <input
+      formControlName="password"
       type="text"
       class="form-control"
       id="password"
