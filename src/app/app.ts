@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Like } from './like/like';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
+  imports: [Like],
 })
 export class App {
-  protected title = 'food-dilivery';
+  tweet = {
+    body: '...',
+    likesCount: 10,
+    isLiked: true,
+  };
 }
