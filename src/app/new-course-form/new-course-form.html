@@ -12,7 +12,10 @@
       *ngIf="username?.touched && username?.invalid"
       class="alert alert-danger"
     >
-      Username is Required
+      <div *ngIf="username?.errors?.['required']">Username is required.</div>
+      <div *ngIf="username?.errors?.['minlength']">
+        Username must be at least 5 characters long.
+      </div>
     </div>
   </div>
 
